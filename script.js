@@ -32,13 +32,13 @@ const CONTENT = {
 
   // ---- Timeline (8 events) ----
   timeline: [
-    { year: "1990", img: "images/timeline1.jpeg", title: "It Began With You and Mmmy- The Peaceful Era", desc: "A time when Mom and Papa still had free time, money, and uninterrupted sleep." },
+    { year: "1990", img: "images/timeline1.jpeg", title: "It Began With You and Mmmy- The Peaceful Era", desc: "A time when Mummy and Papa still had free time, money, and uninterrupted sleep." },
     { year: "Some Year", img: "images/timeline2.jpg", title: "Couple's Trip", desc: "कृपया प्रतीक्षा करें। सिस्टम में जल्द ही शोर, हँसी और खर्चे जोड़े जाएंगे।" },
     { year: "1995", img: "images/timeline3.jpg", title: "The First Princess", desc: "Aur isi din se ghar thoda zyada khush aur thoda kam shaant ho gaya." },
     { year: "Some year again..", img: "images/timeline4.jpg", title: "Papa = Playground", desc: "Papa relax karne ki koshish kar rahe the. Didi ke kuch aur plans the." },
     { year: "2001", img: "images/timeline5.jpg", title: "Papa's 3rd Boss", desc: "Mummy aur Didi ke baad company ne ek aur manager hire kar li." },
-    { year: "2002", img: "images/timeline6.jpg", title: "Kuttu kuttu & The Palu Palus", desc: "Featuring: Kuttu Uttu, Palu Palu, Palu Palu and one very happy Papa."},
-    { year: "2003", img: "images/timeline7.jpg", title: "Palu Palu ki Favourite Seat", desc: "Hum dono ki favourite jagah? Papa ke UPAARRR." },
+    { year: "2002", img: "images/timeline6.jpg", title: "Kuttu kuttu & The Palu Palus", desc: "Featuring: Kuttu Uttu, 1st Palu Palu, 2nd Palu Palu and one very happy Papa."},
+    { year: "2003", img: "images/timeline7.jpg", title: "Palu Palus ki Favourite Seat", desc: "Hum dono ki favourite jagah? Papa ke UPAARRR." },
     { year: "2026", img: "images/Timeline8.jpeg", title: "Us Now", desc: "Still our hero, still our favorite person." }
   ],
 
