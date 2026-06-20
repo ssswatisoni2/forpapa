@@ -563,23 +563,23 @@ function wrapText(ctx, text, x, y) { ctx.fillText(text, x, y); }
   observer.observe(finalSectionEl);
 
   // music toggle
-  const musicBtn = document.getElementById("musicToggle");
-  const music = document.getElementById("bgMusic");
-  let playing = false;
-  musicBtn.addEventListener("click", () => {
-    if (playing) {
-      music.pause();
-      musicBtn.textContent = "🔇 Music";
-    } else {
-      music.play().catch(() => {});
-      musicBtn.textContent = "🔊 Music";
-    }
-    playing = !playing;
-  });
+ // const musicBtn = document.getElementById("musicToggle");
+  //const music = document.getElementById("bgMusic");
+  //let playing = false;
+//  musicBtn.addEventListener("click", () => {
+ //   if (playing) {
+    //  music.pause();
+     // musicBtn.textContent = "🔇 Music";
+  //  } else {
+    //  music.play().catch(() => {});
+   //   musicBtn.textContent = "🔊 Music";
+  //  }
+ //   playing = !playing;
+ // });
 
   // replay button — scrolls back to top & restarts confetti on revisit
-  document.getElementById("replayBtn").addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    launchConfetti();
-  });
+ // document.getElementById("replayBtn").addEventListener("click", () => {
+  //  window.scrollTo({ top: 0, behavior: "smooth" });
+  //  launchConfetti();
+//  });
 })();
