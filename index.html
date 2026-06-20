@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+<title>For Papa ❤️</title>
+
+<!-- Google Fonts: Playfair Display (display), Quicksand (body), Caveat (handwriting) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- AMBIENT BACKGROUND LAYERS (hearts + sparkles, shared globally) -->
+<!-- ============================================================ -->
+<div id="ambient-layer" class="ambient-layer" aria-hidden="true"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 1 — LOCK SCREEN -->
+<!-- ============================================================ -->
+<section id="lock-screen" class="screen lock-screen">
+  <div class="lock-bg"></div>
+  <div class="gift-box-wrap" id="giftBoxWrap">
+    <div class="lock-card" id="lockCard">
+      <div class="lock-icon" id="lockIcon">
+        <svg viewBox="0 0 64 64" width="46" height="46">
+          <rect x="14" y="28" width="36" height="28" rx="6" fill="#E8AFC0"/>
+          <path d="M20 28 V18 a12 12 0 0 1 24 0 v10" fill="none" stroke="#C97B91" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="32" cy="40" r="4.5" fill="#C2185B"/>
+          <rect x="29.5" y="42" width="5" height="9" rx="2" fill="#C2185B"/>
+        </svg>
+      </div>
+      <h1 class="lock-title">Happy Father's Day Popsyy!!!<span class="heart">❤️</span></h1>
+      <p class="lock-subtitle">We made something special for you</p>
+      <p class="lock-subtitle">Use world class password to unlock</p>
+
+      <div class="pin-dots" id="pinDots">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+
+      <div class="keypad" id="keypad">
+        <button class="key" data-key="1">1</button>
+        <button class="key" data-key="2">2</button>
+        <button class="key" data-key="3">3</button>
+        <button class="key" data-key="4">4</button>
+        <button class="key" data-key="5">5</button>
+        <button class="key" data-key="6">6</button>
+        <button class="key" data-key="7">7</button>
+        <button class="key" data-key="8">8</button>
+        <button class="key" data-key="9">9</button>
+        <button class="key key-clear" data-key="clear">✕</button>
+        <button class="key" data-key="0">0</button>
+        <button class="key key-back" data-key="back">⌫</button>
+      </div>
+
+      <p class="lock-message" id="lockMessage">&nbsp;</p>
+    </div>
+  </div>
+  <!-- gift ribbon overlay used for "opening" animation -->
+  <div class="ribbon-overlay" id="ribbonOverlay">
+    <div class="ribbon ribbon-v"></div>
+    <div class="ribbon ribbon-h"></div>
+    <div class="bow">🎀</div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 2 — BALLOON POP MEMORIES -->
+<!-- ============================================================ -->
+<section id="balloon-section" class="screen section-panel hidden-section">
+  <div class="section-inner">
+    <h2 class="section-title">Pop a Memory <span class="heart">🎈</span></h2>
+    <p class="section-subtitle">Tap each balloon to unwrap a little memory</p>
+
+    <div class="balloon-field" id="balloonField"></div>
+
+    <div class="polaroid-stack" id="polaroidStack" aria-live="polite"></div>
+
+    <button class="cta-btn hidden-section" id="continueAfterBalloons">Continue Our Journey ❤️</button>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 3 — MEMORY LANE TIMELINE -->
+<!-- ============================================================ -->
+<section id="timeline-section" class="screen section-panel hidden-section">
+  <div class="section-inner">
+    <h2 class="section-title">Memory Lane <span class="heart">🛤️</span></h2>
+    <p class="section-subtitle">A little journey through the years</p>
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 4 — FUN FACTS ABOUT PAPA -->
+<!-- ============================================================ -->
+<section id="funfacts-section" class="screen section-panel hidden-section">
+  <div class="section-inner">
+    <h2 class="section-title">Fun Facts About Papa <span class="heart">😄</span></h2>
+    <p class="section-subtitle">Tap a card to flip it</p>
+    <div class="funfacts-grid" id="funfactsGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 5 — PHOTO WALL -->
+<!-- ============================================================ -->
+<section id="gallery-section" class="screen section-panel hidden-section">
+  <div class="section-inner">
+    <h2 class="section-title">Photo Wall <span class="heart">📸</span></h2>
+    <p class="section-subtitle">Tap a photo to see it bigger and send a heart</p>
+    <div class="gallery-wall" id="galleryWall"></div>
+  </div>
+</section>
+
+<!-- Lightbox for gallery -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">✕</button>
+  <div class="lightbox-content">
+    <img src="" alt="" id="lightboxImg" />
+    <div class="heart-burst" id="heartBurst"></div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 6 — VIDEO MESSAGE -->
+<!-- ============================================================ -->
+<section id="video-section" class="screen section-panel hidden-section">
+  <div class="section-inner">
+    <h2 class="section-title">A Little Video <span class="heart">🎬</span></h2>
+    <p class="section-subtitle">Just for you, Papa</p>
+    <div class="video-frame">
+      <video id="papaVideo" controls preload="none" poster="images/photo1.jpg">
+        <source src="videos/message.mp4" type="video/mp4" />
+        Your browser does not support video playback.
+      </video>
+      <div class="frame-corner tl"></div>
+      <div class="frame-corner tr"></div>
+      <div class="frame-corner bl"></div>
+      <div class="frame-corner br"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 7 — LETTER TO PAPA -->
+<!-- ============================================================ -->
+<section id="letter-section" class="screen section-panel hidden-section">
+  <div class="section-inner">
+    <h2 class="section-title">A Letter for You <span class="heart">💌</span></h2>
+    <div class="letter-paper">
+      <div class="letter-text" id="letterText"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 8 — CERTIFICATE -->
+<!-- ============================================================ -->
+<section id="certificate-section" class="screen section-panel hidden-section">
+  <div class="section-inner">
+    <h2 class="section-title">An Official Honor <span class="heart">🏅</span></h2>
+    <div class="certificate" id="certificate">
+      <div class="cert-border">
+        <div class="cert-seal">🏅</div>
+        <p class="cert-eyebrow">Certificate of</p>
+        <h3 class="cert-title">World's Best Father</h3>
+        <p class="cert-awarded">Awarded to</p>
+        <p class="cert-name" id="certName">Papa</p>
+        <p class="cert-for">For endless support, infinite patience,<br/>unconditional love &amp; lifetime guidance.</p>
+        <div class="cert-sign-row">
+          <div class="cert-sign">
+            <p class="cert-sign-name">Swati</p>
+            <span class="cert-sign-line"></span>
+            <span class="cert-sign-label">With love</span>
+          </div>
+          <div class="cert-ribbon">🎀</div>
+        </div>
+      </div>
+    </div>
+    <button class="cta-btn" id="downloadCertBtn">Download Certificate</button>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 9 — FINAL SURPRISE -->
+<!-- ============================================================ -->
+<section id="final-section" class="screen section-panel hidden-section">
+  <div class="final-sky"></div>
+  <div class="final-content">
+    <h2 class="final-title">I Love You Papa <span class="heart">❤️</span></h2>
+    <p class="final-subtitle">Thank you for being my hero.</p>
+    <div class="final-controls">
+      <button class="icon-btn" id="musicToggle" title="Toggle music">🔇 Music</button>
+      <button class="icon-btn" id="replayBtn" title="Replay">↺ Replay</button>
+    </div>
+  </div>
+  <canvas id="confettiCanvas"></canvas>
+</section>
+
+<!-- background music (placeholder, muted by default until toggled) -->
+<audio id="bgMusic" src="music/theme.mp3" loop preload="none"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
