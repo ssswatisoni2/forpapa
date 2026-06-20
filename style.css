@@ -405,7 +405,7 @@ button{ font-family: inherit; cursor:pointer; border:none; background:none; }
   letter-spacing: 1px;
 }
 .tl-card img{
-  width:100%; height: 300px; object-fit:cover;
+  width:100%; height: 450px; object-fit:cover;
   border-radius: 10px;
   margin: 8px 0;
   background: var(--blush);
